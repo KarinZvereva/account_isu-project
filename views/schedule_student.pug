@@ -1,0 +1,23 @@
+extends layout.pug
+
+block scripts
+  link(rel="shortcut icon" href="images/favicon.ico" type="image/x-icon")
+  style
+    include ../public/style/schedule.css
+  
+block content
+    div(class="nav")
+        div(class="nav__left")
+          a(href="/profile" class="btn nav-home" ) Главная
+          a(href="/marks" class="btn nav-up") Предметы и оценки    
+          a(href="/schedule/student" class="btn nav-shedule")  Расписание
+          a(href="/msg" class="btn nav-primary")  Сообщения
+        div(class="nav__right")
+          div(class="nav__right-user") Пользователь: #{username}
+          a(href="/login" )
+            button(type="button" class="btn btn-light btn-image nav__right-exit" id="exit")  Выход
+
+    div(class="container")       
+        h4(class="o") Расписание 
+        div(class="clear")
+        p Страница в разработке

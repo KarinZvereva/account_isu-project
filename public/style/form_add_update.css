@@ -1,0 +1,58 @@
+.block__add, .block__update, .block__download{
+    width: 50%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    position: absolute;
+    z-index: 2;
+    top: 25%;
+    left: 25%;
+    display: none;
+    background-color: white;
+}
+p{
+    text-align: center;
+     font-size: large;
+     font-weight: bold;
+}
+.block__add__form__button{
+    display: flex;
+    justify-content: space-around;
+
+}
+.block__input button{
+    width: 30% ;
+    background-color: #384683;
+    border-color: #384683;
+}
+.block__input  button:hover{
+    background-color: white;
+	color: #384683;
+	border-color: #384683;
+    box-shadow: none !important;
+}
+.block__input button:active{
+    background-color: white !important;
+	color: #384683 !important;
+	border-color: #384683;
+    box-shadow: none !important;
+}
+.block__input button:focus{
+    box-shadow: none !important;
+}
+select:active, input:active{
+    border-color: #abb8f1 !important;
+    box-shadow: 0 0 0 3px #abb8f1 !important;
+}
+select:focus, input:focus{
+    border-color: #abb8f1 !important;
+    box-shadow: 0 0 0 3px #abb8f1 !important;
+}
+select:hover, input:hover{
+    box-shadow: none !important;
+}

@@ -1,0 +1,57 @@
+extends layout.pug
+block scripts
+	link(rel="shortcut icon" href="images/favicon.ico" type="image/x-icon")
+	style
+		include ../public/style/up_admin.css
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js")
+	script
+		include ../public/scripts/jquery-3.2.1.min.js
+	script
+		include ../public/scripts/js_file.js
+	script(src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js")
+block content
+	div(class="nav")
+		div(class="nav__left")
+			a(href="/profile" class="btn nav-home" ) Главная
+			a(href="/users" class="btn nav-users")  Пользователи
+			a(href="/directions" class="btn nav-dirs") Направления
+			a(href="/groups" class="btn nav-groups")  Группы
+			a(href="/up" class="btn nav-up") Учебный план
+			a(href="/marks/admin" class="btn nav-schedule")  Оценки    
+			a(href="/schedule" class="btn nav-schedule")  Расписание
+		div(class="nav__right")
+			div(class="nav__right-user") Пользователь: #{username}
+			a(href="/login" )
+				button(type="button" class="btn btn-light btn-image nav__right-exit" id="exit")  Выход
+
+	div(class="container")
+		h2 Загрузить учебный план 
+		form(id="fup" enctype="multipart/form-data" method="post"  action="/load/a") 
+			p
+			div(class="row")
+				div(class="col")
+					select(name='dir' class="form-control" class="d")
+						option(disabled selected) Выберите направление подготовки
+						- var c = dirs
+						each item in c
+							option=item.code+" "+item.direction
+				div(class="col btn-sm")
+					input(type="file" class="form-control-file" accept="*/xml" name='file')
+			p 
+				input(type='submit' value="Ok" id='sub' class="btn btn-primary button__ok")
+		h2 Просмотреть учебный план
+		p
+		div(class="row")
+			div(class="col")
+				select(name='dis' id='dis_change' class="form-control")
+					option(disabled selected) Выберите направление
+					- var c = dirs
+					each item in c
+						option=item.code+" "+item.direction
+			div(class="col")
+				select(name='year' id='year_change' class="form-control")
+					option(disabled selected) Выберите год начала обучения
+					- var c = masy
+					each item in c
+						option=item.year
+		div(id="table")

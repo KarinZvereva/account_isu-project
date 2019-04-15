@@ -1,0 +1,159 @@
+.block__message{
+    display: flex;
+	flex-direction: row;
+	margin-bottom: 2%;
+}
+.block__message-title{
+    padding-right: 2%;
+}
+.button__add{
+    margin-top: 1%;
+    background-color: #384683;
+    border-color: #384683;
+}
+.button__add:hover{
+    background-color: white;
+	color: #384683;
+	border-color: #384683;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+.button__add:active{
+    background-color: white !important;
+	color: #384683 !important;
+	border-color: #384683;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+.button__add:focus{
+	border-color: #384683;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+.block__message-create:active{
+	box-shadow: 0 0 2px 2px #384683 !important;
+}
+.block__message-create:focus{
+	box-shadow: 0 0 2px 2px #384683 !important;
+}
+.block{
+    margin: auto 1%;
+}
+#Textarea1 {
+	margin: 15px 0;
+}
+
+#create {
+	margin: 0 15px;
+	margin-top: -2px;
+	background-color: #f7f9fa;
+}
+
+#subm {
+	margin-left: 0;
+}
+
+.clear {
+	clear:both;
+
+}
+
+.time {
+	text-align: right;
+	color: #8da5b1;	
+}
+
+.not {
+	background-color: #f7f9fa;
+	border-radius: 15px;
+	padding: 15px 10px 3px 10px;
+	margin-bottom: 1%;
+}
+
+.not:first-child {
+	margin-top: 20px;
+}
+
+
+.auth {
+	float:left;
+	color: #8da5b1;
+}
+
+#sub, #submarks {
+	margin: 10px 0;
+	width: 10%;
+}
+
+#submarks {
+	margin: 0px 10px;
+	display: none;
+}
+
+#table {
+	margin: 15px 0;
+	padding: 2px;
+}
+
+.table{
+	margin: 25px 0;
+}
+
+#createform {
+	border-radius: 15px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	margin: 0;
+	padding: 30px;
+    background: #fff;
+    position: absolute;
+    width: 50%;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 10000000;
+}
+
+.m {
+	margin-top: 15px;
+}
+
+#menu{
+    display: inline;
+}
+.table{
+    width: 90%;
+    margin: auto;
+}
+
+.delete {
+	font-size: 12px;
+	color: #555;
+	text-decoration: underline;
+	text-align: right;
+	margin-bottom: 0;
+	cursor: pointer;
+	float: right;
+	margin-left: 10px;
+}
+
+.edit {
+	font-size: 12px;
+	color: #555;
+	text-decoration: underline;
+	text-align: right;
+	margin-bottom: 0;
+	cursor: pointer;
+	
+}
+
+.mess {
+	width: 80%;
+}
+.curs {
+	font-style: italic;
+}
+#cancel{
+	margin-left: 10px;
+}

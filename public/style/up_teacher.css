@@ -1,0 +1,21 @@
+select:active{
+    border-color: #abb8f1 !important;
+    box-shadow: 0 0 0 3px #abb8f1 !important;
+}
+select:focus{
+    border-color: #abb8f1 !important;
+    box-shadow: 0 0 0 3px #abb8f1 !important;
+}
+select:hover{
+    box-shadow: none !important;
+}
+#table{
+    margin: auto 1%;
+}
+h2{
+    margin: auto 1%;
+    margin-bottom: 2%;
+}
+#table{
+    margin-top: 1%;
+}

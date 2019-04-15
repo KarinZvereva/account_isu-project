@@ -1,0 +1,31 @@
+.block__line{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 2%;
+}
+tbody th{
+    font-weight: normal;
+}
+.block__line-add:before{
+     background-image : url(../images/add.png);
+}
+.block__line-del:before{
+    background-image : url(../images/del.png);
+}
+.block__line-add{
+    margin-right: 1%;
+}
+.block__line-del{
+    margin-right: 1%;
+}
+.info{
+      background-color: #fff;
+      cursor: pointer;
+}
+.block__line-update:before{
+    background-image : url(../images/update.png);
+}
+.block__line-update{
+    margin-right: 1%;
+}

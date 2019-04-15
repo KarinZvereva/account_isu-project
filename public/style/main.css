@@ -1,0 +1,48 @@
+.block1{
+    display: grid;
+    justify-content: center;	
+    grid-template-columns: 40% 40%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: auto;
+    border: 10px solid rgb(0, 113, 189);
+    margin-left: 13%;
+    margin-right: 13%;
+    margin-top: 10%;
+    border-radius: 10px;    
+    box-shadow:  0 0 20px rgba(0,0,0,0.5); 
+}
+.grid_item{   
+    justify-self: center;
+    align-self: center;
+}
+#img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+#form{
+    margin-right: 23%;
+    margin-top: -18%;
+}
+h2{
+    width: 130%;
+    padding: 3%;
+    text-align: center;  
+}
+button{
+    margin-top: 5%;
+    width: 100%;
+}
+.form-horizontal{
+    width: 130%;
+}
+.wrong{
+    border-bottom: 3px red solid;
+    text-align: center;
+    padding-bottom: 2%;
+    margin-bottom: 5%;
+    width: 130%;
+    font-size: medium;
+    font-weight: bold;
+}
+

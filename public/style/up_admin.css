@@ -1,0 +1,39 @@
+select:active{
+    border-color: #abb8f1 !important;
+    box-shadow: 0 0 0 3px #abb8f1 !important;
+}
+select:focus{
+    border-color: #abb8f1 !important;
+    box-shadow: 0 0 0 3px #abb8f1 !important;
+}
+select:hover{
+    box-shadow: none !important;
+}
+.button__ok{
+    margin-top: 2%;
+    background-color: #384683;
+    border-color: #384683;
+}
+.button__ok:hover{
+    background-color: white;
+	color: #384683;
+	border-color: #384683;
+    box-shadow: none !important;
+}
+.button__ok:active{
+    background-color: white !important;
+	color: #384683 !important;
+	border-color: #384683;
+    box-shadow: none !important;
+}
+.button__ok:focus{
+    box-shadow: none !important;
+}
+option:hover{
+    background-color: #384683;
+}
+select>option:hover{
+    color: blue !important;
+    background: white !important;
+    
+}

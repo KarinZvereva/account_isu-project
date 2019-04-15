@@ -1,0 +1,43 @@
+.button-ok{
+    margin-top: 1%;
+    margin: auto 1%;
+    background-color: #384683;
+    border-color: #384683;
+}
+.button-ok:hover{
+    background-color: white;
+	color: #384683;
+	border-color: #384683;
+    box-shadow: none !important;
+}
+.button-ok:active{
+    background-color: white !important;
+	color: #384683 !important;
+	border-color: #384683;
+    box-shadow: none !important;
+}
+.button-ok:focus{
+    box-shadow: none !important;
+}
+select:active{
+    border-color: #abb8f1 !important;
+    box-shadow: 0 0 0 3px #abb8f1 !important;
+}
+select:focus{
+    border-color: #abb8f1 !important;
+    box-shadow: 0 0 0 3px #abb8f1 !important;
+}
+select:hover{
+    box-shadow: none !important;
+}
+#table{
+    margin: auto 1%;
+}
+.row{
+    margin: 0 !important;
+    margin-bottom: 2% !important;
+}
+h2{
+    margin: auto 1%;
+    margin-bottom: 2%;
+}

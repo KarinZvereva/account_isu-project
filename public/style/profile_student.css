@@ -1,0 +1,24 @@
+
+#container{
+    margin-top: 1%;
+    margin-bottom: 3%;
+    display: grid;
+    align-content: stretch;	
+}
+.mess {
+	width: 80%;
+}
+.time {
+	text-align: right;
+	color: #8da5b1;	
+}
+.auth {
+	float:left;
+	color: #8da5b1;
+}
+.not {
+	background-color: #f7f9fa;
+	border-radius: 15px;
+	padding: 15px 10px 3px 10px;
+	margin-bottom: 1%;
+}

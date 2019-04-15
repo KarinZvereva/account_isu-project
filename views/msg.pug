@@ -1,0 +1,26 @@
+html
+	head
+		meta(charset="UTF-8")
+		title Сообщения
+		style
+			include ../public/style/style_msg.css
+	body
+		div(class="f")
+			input(class="type-search" id="searchInput" type="text" placeholder="Choose user...")
+			select(size="10" id="list")
+				- var c = mas
+				each item in c
+					option(value=item.username)=item.surname+" "+item.name+" "+item.lastname
+			ul(class="friends")
+		ul(class="pages")
+			li(class="chat page")
+				div(class="chatArea")
+					ul(class="messages")
+				input(class="inputMessage" placeholder="Type here...")
+		script(src="https://code.jquery.com/jquery-1.10.2.min.js")
+		script
+			include ../public/scripts/main.js
+		script
+			include ../public/scripts/sub.js	
+		script
+			include ../public/scripts/socket.io.js

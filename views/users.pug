@@ -1,0 +1,100 @@
+extends layout.pug
+block scripts
+    link(rel="shortcut icon" href="images/favicon.ico" type="image/x-icon")
+    style
+        include ../public/style/users.css
+        include ../public/style/form_add_update.css
+    script
+        include ../public/scripts/users.js
+        include ../public/scripts/jquery-3.2.1.min.js
+
+block content
+    div(class="nav")
+        div(class="nav__left")
+          a(href="/profile" class="btn nav-home" ) Главная
+          a(href="/users" class="btn nav-users")  Пользователи
+          a(href="/directions" class="btn nav-dirs") Направления
+          a(href="/groups" class="btn nav-groups")  Группы
+          a(href="/up" class="btn nav-up") Учебный план
+          a(href="/marks/admin" class="btn nav-schedule")  Оценки    
+          a(href="/schedule" class="btn nav-shedule")  Расписание
+        div(class="nav__right")
+          div(class="nav__right-user") Пользователь: #{username}
+          a(href="/login" )
+            button(type="button" class="btn btn-light btn-image nav__right-exit" id="exit")  Выход
+
+    div(class="block__line")
+            button(class="btn btn-light btn-image block__line-download") Загрузить группу
+            button(class="btn btn-light btn-image block__line-add") Добавить
+            button(class="btn btn-light btn-image block__line-update") Изменить
+            button(class="btn btn-light btn-image block__line-del") Удалить
+
+    
+    table(class="table")
+        thead
+           tr
+                th №
+                th Имя
+                th Фамилия
+                th Отчество
+                th Дата рождения
+                th Username
+                th Password
+                th Статус
+                th Направление
+                th Год поступления
+                th Группа
+        tbody(class="table_body")
+            -resultQuery=data; 
+            -for(var i=0;i<resultQuery.length;i++){
+            tr(class="info")
+                th=i+1
+                th=resultQuery[i].name
+                th=resultQuery[i].surname
+                th=resultQuery[i].lastname
+                th=resultQuery[i].birthday
+                th=resultQuery[i].username
+                th=resultQuery[i].password 
+                th=resultQuery[i].role
+                th=resultQuery[i].direction
+                th=resultQuery[i].year
+                th=resultQuery[i].groupname
+            -}         
+
+    div(class="block__input")
+      div(class="block__add")
+            p Пользователь
+            div(class="form-group")
+                label Фамилия:
+                input(type="text" class="form-control " id="field-surname" placeholder="Введите фамилию" )
+            div(class="form-group")
+                label Имя:
+                input(type="text" class="form-control" id="field-name" placeholder="Введите имя" )
+            div(class="form-group")
+                label Отчество:
+                input(type="text" class="form-control" id="field-fathername" placeholder="Введите отчество")      
+            div(class="block__add__form__button")    
+                button(class="btn btn-primary" class="button-add") Добавить
+                button(class="btn btn-primary" class="button__cancel-add") Отмена
+
+      div(class="block__update")
+            p Пользователь
+            div(class="form-group")
+                label Фамилия:
+                input(type="text" class="form-control " id="field__current-surname" placeholder="Введите фамилию" )
+            div(class="form-group")
+                label Имя:
+                input(type="text" class="form-control" id="field__current-name" placeholder="Введите имя" )
+            div(class="form-group")
+                label Отчество:
+                input(type="text" class="form-control" id="field__current-fathername" placeholder="Введите отчество")       
+            div(class="block__add__form__button")    
+                button(class="btn btn-primary" class="button__save") Сохранить
+                button(class="btn btn-primary" class="button__cancel-save") Отмена   
+
+      div(class="block__download")
+            p Загрузка группы
+               
+            div(class="block__add__form__button")    
+                button(class="btn btn-primary" class="button__download") Загрузить 
+                button(class="btn btn-primary" class="button__cancel-download") Отмена 

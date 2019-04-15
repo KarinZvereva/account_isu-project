@@ -1,0 +1,32 @@
+head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    style
+        include ../public/style/style.css
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js")
+    title Авторизация
+
+body
+    div(class="container")
+        div(class="container__logo")
+            img(src="images/logo.jpg" alt="logo" class="img")
+
+        div(class="container-block")
+            form(action="/login" method="post" class="form-horizontal container-block-form")
+                label(for="" class="container-block-form__title") Личный кабинет
+                div(class="container-block-form-field field_margin")
+                    label(for="" class="container-block-form-field-label ") Логин:
+                    input(type="text" name="username" class="form-control container-block-form-field__login" value="Enter login")
+                    
+
+                div(class="container-block-form-field field_margin")
+                    label(for="" class="container-block-form-field-label") Пароль:
+                    input(type="password" name="password" class="form-control container-block-form-field__password" value="Enter password")
+
+                div(class="container-block-form  field_margin")
+                    button(type="submit" class="btn btn-default container-block-form__button") Войти

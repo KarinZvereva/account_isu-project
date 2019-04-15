@@ -1,0 +1,60 @@
+extends layout.pug
+block scripts
+  link(rel="shortcut icon" href="images/favicon.ico" type="image/x-icon")
+  style
+    include ../public/style/profile_admin.css
+  script
+    include ../public/scripts/admin.js
+
+block content
+  div(class="nav")
+        div(class="nav__left")
+          a(href="/profile" class="btn nav-home" ) Главная
+          a(href="/up/teacher" class="btn nav-up") Учебный план    
+          a(href="/marks/teacher" class="btn nav-marks")  Оценки
+          a(href="/schedule/teacher" class="btn nav-shedule")  Расписание
+          a(href="/msg" class="btn nav-primary")  Сообщения
+        div(class="nav__right")
+          div(class="nav__right-user") Пользователь: #{username}
+          a(href="/login" )
+            button(type="button" class="btn btn-light btn-image nav__right-exit" id="exit")  Выход
+
+  div(class="container")
+    div(class="block")
+      div(class="block__message")
+        h4(class="block__message-title") Объявления
+        button(type="button" class="btn block__message-create" id="create")  Создать объявление   
+      div(class="clear")
+      div(id="container")
+      - var g = not
+        each item in g
+          if user==item.username
+            div(class="not" id=item.id)
+              p(class="delete" id=item.id) Удалить
+              p(class="edit" id=item.id) Редактировать
+              p(class="mess")=item.text
+              p(class="auth")=item.surname+" "+item.name+" "+item.lastname
+              p(class="time")=item.time
+          else
+            div(class="not" id=item.id)
+              p(class="mess")=item.text
+              p(class="auth")=item.surname+" "+item.name+" "+item.lastname
+              p(class="time")=item.time
+    div(id="createform")
+      form
+      div(class="form-group")
+        div(id="checks")
+          div(class="form-check")
+            input(class="form-check-input" type="checkbox" id="all" checked)
+            label(class="form-check-label" for="all") Всем 
+            br
+            - var c = groups
+            each item in c
+              div(class="form-check form-check-inline")
+                input(class="form-check-input all" type="checkbox" value=item.id checked)
+                label(class="form-check-label" for="all")=item.name
+            p
+        label(for="Textarea1") Введите текст объявления
+        textarea(class="form-control" id="Textarea1")
+        button(type="submit" id="subm" class="btn btn-primary button__add")  Ок
+        button(type="submit" id="cancel" class="btn btn-primary button__add")  Отмена
