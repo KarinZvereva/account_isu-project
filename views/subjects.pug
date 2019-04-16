@@ -1,30 +1,25 @@
-head
-  title Личный кабинет
-  meta(charset="utf-8")
-  meta(name="viewport" content="width=device-width, initial-scale=1")
-  link(rel="shortcut icon" href="images/favicon.ico" type="image/x-icon")
-  link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css")
-  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+extends layout.pug
+block scripts
   style
-    include ../public/style/admin.css
+      include ../public/style/form_add_update.css
   script
     include ../public/scripts/js_subjects.js
   script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js")
-  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js")
   
-body
-    div(class="header")
-      p Пользователь: #{username}
-      a(href="/login" )
-        button(type="button" class="btn btn-link" id="exit")  Выход
-    div(class="container")
-      div( id="menu")
-        a(href="/profile" class="btn btn-primary" id="current") Главная
-        a(href="/schedule" class="btn btn-primary") Расписание    
-        a(href="/subjects" class="btn btn-primary")  Предметы и оценки
-        a(href="/msg" class="btn btn-primary")  Сообщения          
-    h4(class="o") Предметы и оценки 
-    div(class="clear")
-    p(class="m") Выберите семестр
-    select(name='dis' id='sem_change' class="form-control")
-    div(id="table")
+block content
+    div(class="nav")
+        div(class="nav__left")
+          a(href="/profile" class="btn nav-home" ) Главная
+          a(href="/subjects" class="btn nav-up") Предметы и оценки    
+          a(href="/schedule/student" class="btn nav-shedule")  Расписание
+          a(href="/msg" class="btn nav-primary")  Сообщения
+        div(class="nav__right")
+          div(class="nav__right-user") Пользователь: #{username}
+          a(href="/login" )
+            button(type="button" class="btn btn-light btn-image nav__right-exit" id="exit")  Выход
+    div(class="container")                 
+      h4(class="o") Предметы и оценки 
+      div(class="clear")
+      p(class="m") Выберите семестр
+      select(name='dis' id='sem_change' class="form-control")
+      div(id="table")
